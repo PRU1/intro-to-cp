@@ -1,11 +1,21 @@
-# Welcome to your Jupyter Book
+# Introduction to Python programming
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Hey there! Some text here
+TESTING TESTING
 
-Check out the content pages bundled with this sample book to see more.
+cool this is in markdown
+$\LaTeX{}$, $x^2$, this is cool 
 
+$c_n=\frac{f^{n}}{c!}$
+testing code block
+
+```
+print("hello world")
+# about as much python as I know right now
+
+:::{note}
+This is a note!
+:::
+```
 ```{tableofcontents}
 ```

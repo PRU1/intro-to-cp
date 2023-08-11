@@ -5,5 +5,20 @@ format: jb-book
 root: intro
 chapters:
 - file: markdown
+- file: testing
 - file: notebooks
 - file: markdown-notebooks
+- file: Introduction_to_programming
+- file: The_basics
+- file: Strings
+- file: Conditionals
+- file: Loops
+- file: Lists
+- file: Dictionary
+- file: Functions
+- file: Python_packages
+- file: Pygame_??
+- file: Resources_for_further_learning
+- file: Fun_math_problems
+
+
