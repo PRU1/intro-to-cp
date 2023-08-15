@@ -4,21 +4,15 @@
 format: jb-book
 root: intro
 chapters:
+- file: basics
+- file: time-complexity
+- file: maximum-subarray
+- file: prefix-sum
+- file: recursion
+- file: sorting
+- file: dp
+- file: graph-algorithms
+- file: cpp-tips 
+- file: java-tips 
+- file: math-tips 
 - file: markdown
-- file: testing
-- file: notebooks
-- file: markdown-notebooks
-- file: Introduction_to_programming
-- file: The_basics
-- file: Strings
-- file: Conditionals
-- file: Loops
-- file: Lists
-- file: Dictionary
-- file: Functions
-- file: Python_packages
-- file: Pygame_??
-- file: Resources_for_further_learning
-- file: Fun_math_problems
-
-
