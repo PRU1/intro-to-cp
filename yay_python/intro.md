@@ -1,12 +1,12 @@
 # Introduction to Competitive Programming
 
-
 ## About Competitive Programming
 In competitive programming, you are given a programming problem and have to code a solution to it. Your program will be given a bunch of inputs, and it must output some correct value. 
 
 Here's an example of a competitive programming contest taken from CCC. CCC (Canadian Computing Contest) is a coding contest held by the University of Waterloo. There are two difficulty levels to CCC, Junior and Senior, the difference being that senior problems are *much harder*
 
-<img src="ccc_photo.png" alt="CCC J4/S1 2023">
+![CCC 2023 J4/S1](/ccc_photo.png)
+
 
 *Problem: CCC 2023 J4/S1*
 
@@ -18,7 +18,7 @@ For the Canadian Computing Contest, you can write your code in Java, C++, C, Pyt
 ```
 
 ## A note about this website
-This guide assumes you know your chosen programming language well! We try our best to provide code examples for both Java and C++. But this website is still under development, so we apologize if there is missing code.
+This guide assumes you know your chosen programming language well! We try our best to provide code examples for both Java and C++. But this website is still under development, so we apologize if there is missing code in your preferred language.
 
 ## About this website
 - Made by Dr. G. W. Williams Coding Club

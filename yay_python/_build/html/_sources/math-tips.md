@@ -54,19 +54,18 @@ A set is a collection of objects (objects can be numbers, strings, etc.). For ex
 - **Intersection** $A \cap B$: The elements two sets have in common. i.e. if $A=\{2,4,6,8\}$ and $B=\{4,8\}$, then $A \cap B = \{4,8\}$
 - **Union** $A \cup B$: Combine elements of $A$ and $B$ into one set
 - **Complement** $\bar{A}$: Every element NOT in $A$. Depends on a *universal set*, which tells every possible element that could be in a set. So if a universal set was $\{1,2,3,4,5,6,7,8,9,10\}$ and $A = \{1,2,3\}$, then $\bar{A}=\{4,5,6,7,8,9,10\}$
-- **Difference** $A \setminus B$**:** Every element in $A$ but not in $B$, like $A$ minus $B$. See the following [image](https://www.math-only-math.com/difference-of-sets-using-Venn-diagram.html):
+- **Difference** $A \setminus B$**:** Every element in $A$ but not in $B$, like $A$ minus $B$. See this [website](https://www.math-only-math.com/difference-of-sets-using-Venn-diagram.html):
 
  
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20ab54b8-3ebc-4cd6-8d6b-7bca399b6e6d/Untitled.png)
 
 ### Set notation
 
 |  Symbol | Meaning |
 | --- | --- |
-| $|A|$ | The size of a set (the number of elements). Also called cardinality |
+| $\mid A \mid$ | The size of a set (the number of elements). Also called cardinality |
 | $A \subset B$ | $A$ is a subset of $B$: each element of A is also in B |
 | $\emptyset$ | Means set is empty |
-| $4 \in \R$  |  4 is in the real number set |
-| $4 \notin \R$ | 4 is NOT in the real number set |
+| $4 \in \mathbb{R}$  |  4 is in the real number set |
+| $4 \notin \mathbb{R}$ | 4 is NOT in the real number set |
 | $\mathfrak{P}(A)$ or $P(A)$ |  Refers to all subsets of a set (in this case, a set called $A$). There are $2^{|A|}$ subsets if you include the original set and an empty set as a subset |
