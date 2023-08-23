@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Introduction to Competitive Programming &#8212; Introduction to Python</title>
+    <title>Getting started &#8212; Introduction to Python</title>
   
   
   
@@ -61,10 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'basics';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting started" href="basics.html" />
+    <link rel="next" title="Math tips" href="math-tips.html" />
+    <link rel="prev" title="Introduction to Competitive Programming" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -130,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -149,14 +152,14 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Introduction to Competitive Programming
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="basics.html">Getting started</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="math-tips.html">Math tips</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 </ul>
@@ -230,7 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbasics.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +263,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/basics.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +345,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction to Competitive Programming</h1>
+    <h1>Getting started</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -352,11 +355,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-competitive-programming">About Competitive Programming</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-about-programming-languages">A note about programming languages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-about-this-website">A note about this website</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-this-website">About this website</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-us">Contact Us</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccc-j1-2023">CCC J1 2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-specification">Input Specification</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-specification">Output Specification</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-input-1">Sample Input 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-output-1">Sample Output 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation-for-sample-1">Explanation for Sample 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-solution">Submitting Your Solution</a></li>
 </ul>
             </nav>
         </div>
@@ -368,41 +375,80 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-competitive-programming">
-<h1>Introduction to Competitive Programming<a class="headerlink" href="#introduction-to-competitive-programming" title="Permalink to this heading">#</a></h1>
-<section id="about-competitive-programming">
-<h2>About Competitive Programming<a class="headerlink" href="#about-competitive-programming" title="Permalink to this heading">#</a></h2>
-<p>In competitive programming, you are given a programming problem and have to code a solution to it. Your program will be given a bunch of inputs, and it must output some correct value.</p>
-<p>Here’s an example of a competitive programming contest taken from CCC. CCC (Canadian Computing Contest) is a coding contest held by the University of Waterloo. There are two difficulty levels to CCC, Junior and Senior, the difference being that senior problems are <em>much harder</em></p>
-<p><img alt="CCC 2023 J4/S1" src="_images/ccc_photo.png" /></p>
-<p><em>Problem: CCC 2023 J4/S1</em></p>
-<p>This website aims to show you the basics of competitive programming, with tips to practice.</p>
-</section>
-<section id="a-note-about-programming-languages">
-<h2>A note about programming languages<a class="headerlink" href="#a-note-about-programming-languages" title="Permalink to this heading">#</a></h2>
-<p>For the Canadian Computing Contest, you can write your code in Java, C++, C, Python 3, or Python 2. You can write in any of those languages, but keep in mind for tough problems (especially at the Senior level), the compilation time of Python is slow. There’s a time limit in which your program must output an answer, so Python may not cut it. We recommend learning C++ or Java, since they have faster execution times (see <a class="reference external" href="https://www.reddit.com/r/learnprogramming/comments/w4ofli/why_is_c_faster_than_python/">https://www.reddit.com/r/learnprogramming/comments/w4ofli/why_is_c_faster_than_python/</a>)</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="basics.html">Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="math-tips.html">Math tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
+<p>We are assuming you know the basics of your chosen programming language. The easiest way to practice problems is through <span class="xref myst">DMOJ</span>. On DMOJ you’ll find a bunch of programming questions. You can copy/paste your code into DMOJ, and it will grade it.</p>
+<p>Let’s learn how DMOJ works with a CCC problem.</p>
+<section id="ccc-j1-2023">
+<h2>CCC J1 2023<a class="headerlink" href="#ccc-j1-2023" title="Permalink to this heading">#</a></h2>
+<p>Every year there are 5 junior and senior problems. Junior and Senior problems are labelled as <em>J &lt;question #&gt;</em> and <em>S &lt;question #&gt;</em> respectively. So J1 is the first problem in the Junior section of CCC.</p>
+<hr class="docutils" />
+<p>In the game, Deliv-e-droid, a robot droid has to deliver packages while avoiding obstacles. At the end of the game, the final score is calculated based on the following point system:</p>
+<ul class="simple">
+<li><p>Gain points for every package delivered.</p></li>
+<li><p>Lose points for every collision with an obstacle.</p></li>
+<li><p>Earn a bonus points if the number of packages delivered is greater than the number of collisions with obstacles.</p></li>
 </ul>
+<p>Your job is to determine the final score at the end of a game.</p>
+<section id="input-specification">
+<h3>Input Specification<a class="headerlink" href="#input-specification" title="Permalink to this heading">#</a></h3>
+<p>The input will consist of two lines. The first line will contain a non-negative integer <span class="math notranslate nohighlight">\(P\)</span>, representing the number of packages delivered. The second line will contain a non-negative integer <span class="math notranslate nohighlight">\(C\)</span>, representing the number of collisions with obstacles.</p>
+</section>
+<section id="output-specification">
+<h3>Output Specification<a class="headerlink" href="#output-specification" title="Permalink to this heading">#</a></h3>
+<p>The output will consist of a single integer, <span class="math notranslate nohighlight">\(F\)</span>, representing the final score.</p>
+</section>
+<section id="sample-input-1">
+<h3>Sample Input 1<a class="headerlink" href="#sample-input-1" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
+<span class="mi">2</span>
+</pre></div>
 </div>
 </section>
-<section id="a-note-about-this-website">
-<h2>A note about this website<a class="headerlink" href="#a-note-about-this-website" title="Permalink to this heading">#</a></h2>
-<p>This guide assumes you know your chosen programming language well! We try our best to provide code examples for both Java and C++. But this website is still under development, so we apologize if there is missing code in your preferred language.</p>
+<section id="sample-output-1">
+<h3>Sample Output 1<a class="headerlink" href="#sample-output-1" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">730</span>
+</pre></div>
+</div>
 </section>
-<section id="about-this-website">
-<h2>About this website<a class="headerlink" href="#about-this-website" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Made by Dr. G. W. Williams Coding Club</p></li>
-<li><p>Made with <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter Books</a></p></li>
-</ul>
+<section id="explanation-for-sample-1">
+<h3>Explanation for Sample 1<a class="headerlink" href="#explanation-for-sample-1" title="Permalink to this heading">#</a></h3>
+<p>There are <span class="math notranslate nohighlight">\(5\)</span> packages delivered, so <span class="math notranslate nohighlight">\(5 \times 50 = 250\)</span>
+points are gained. There are <span class="math notranslate nohighlight">\(2\)</span>
+collisions, so <span class="math notranslate nohighlight">\(2 \times 10 = 20\)</span>
+points are lost. Since <span class="math notranslate nohighlight">\(5 &gt; 2\)</span>
+, a bonus <span class="math notranslate nohighlight">\(500\)</span>
+points are earned. Therefore, the final score is <span class="math notranslate nohighlight">\(250 - 20 + 500\)</span>
+.</p>
+<p>*** <a class="reference external" href="https://dmoj.ca/problem/ccc23j1">Link to Problem</a> ***</p>
+<p>Try coding a solution to this problem. Once you’re done, continue reading.</p>
 </section>
-<section id="contact-us">
-<h2>Contact Us<a class="headerlink" href="#contact-us" title="Permalink to this heading">#</a></h2>
-<p>Spot a typo or have a question? Contact us on Discord at assistant_of_milo or by <a href = "mailto: 340895069@gapps.yrdsb.ca"> email </a></p>
+</section>
+<section id="submitting-your-solution">
+<h2>Submitting Your Solution<a class="headerlink" href="#submitting-your-solution" title="Permalink to this heading">#</a></h2>
+<p>We submit a solution to DMOJ so it can be graded.</p>
+<p>By “graded”, we mean it runs your code and gives it a bunch of inputs. If you code gives a correct output, the grader displays a message, summarized in the table below.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Message</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong><span style="color:Green"> AC </span></strong></p></td>
+<td><p>Accepted</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong><span style="color:Red">WA</span></strong></p></td>
+<td><p>Wrong Answer</p></td>
+</tr>
+<tr class="row-even"><td><p><strong><span style="color:Grey">TLE</span></strong></p></td>
+<td><p>Time Limit Exceeded</p></td>
+</tr>
+</tbody>
+</table>
+<p>If the coder shows <strong><span style="color:Grey">TLE</span></strong> it means your program is too slow (there is a compilation time limit!)</p>
+<p>To submit the solution to DMOJ, click “Submit Solution” on the right side of the screen. You will need to have opened a DMOJ account to submit a solution.</p>
+<p>TODO: add solutions??</p>
 </section>
 </section>
 
@@ -437,12 +483,21 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction to Competitive Programming</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="basics.html"
+       href="math-tips.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Getting started</p>
+        <p class="prev-next-title">Math tips</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -464,11 +519,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-competitive-programming">About Competitive Programming</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-about-programming-languages">A note about programming languages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-about-this-website">A note about this website</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-this-website">About this website</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-us">Contact Us</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccc-j1-2023">CCC J1 2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-specification">Input Specification</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-specification">Output Specification</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-input-1">Sample Input 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-output-1">Sample Output 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation-for-sample-1">Explanation for Sample 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-your-solution">Submitting Your Solution</a></li>
 </ul>
   </nav></div>
 
