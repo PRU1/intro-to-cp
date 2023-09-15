@@ -61,6 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'time-complexity';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -141,8 +143,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/milo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/milo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo2.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo2.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -354,6 +356,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-o-notation-rules">Big O Notation Rules</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
             </nav>
@@ -370,9 +373,68 @@ document.write(`
 <h1>Introduction to Time Complexity<a class="headerlink" href="#introduction-to-time-complexity" title="Permalink to this heading">#</a></h1>
 <p>There’s a compilation time limit for each programming question. So, we need to design efficient algorithms. Analysing time complexity let’s us decide an efficient algorithm to use in a programming problem.</p>
 <p>In a nutshell, time complexity describes how the time it takes to run your algorithm increases as the input size increases.</p>
-<p>For competitive programming, we focus on <strong>Big O Notation</strong>. Big O Notation tells you the <em>worst</em> case performance of your algorithm.
-TODO: finish and give examples
+<p>For competitive programming, we focus on <strong>Big O Notation</strong>. Big O Notation tells you the <em>worst</em> case performance of your algorithm.</p>
+<section id="big-o-notation-rules">
+<h2>Big O Notation Rules<a class="headerlink" href="#big-o-notation-rules" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Written as $<span class="math notranslate nohighlight">\(O(...)\)</span><span class="math notranslate nohighlight">\( where \)</span><span class="math notranslate nohighlight">\(...\)</span><span class="math notranslate nohighlight">\( is a function in terms of \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\(. \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( is the number of inputs. For example, if you're algorithm has time complexity of \)</span><span class="math notranslate nohighlight">\(O(n^2)\)</span><span class="math notranslate nohighlight">\(, then for \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( inputs your algorithm will take \)</span><span class="math notranslate nohighlight">\(n^2\)</span>$ steps to complete.</p></li>
+<li><p>The time complexity for single commands is $<span class="math notranslate nohighlight">\(O(1)\)</span>$</p></li>
+</ul>
+<p>i.e.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">++</span><span class="p">;</span>
+<span class="n">b</span><span class="o">--</span><span class="p">;</span>
+<span class="nb">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="o">//</span> <span class="n">this</span> <span class="n">program</span> <span class="n">runs</span> <span class="ow">in</span> <span class="n">O</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">time</span> <span class="n">complexity</span><span class="o">.</span>
+<span class="o">//</span> <span class="n">One</span> <span class="n">way</span> <span class="n">to</span> <span class="n">think</span> <span class="n">of</span> <span class="n">it</span><span class="p">:</span> <span class="n">there</span> <span class="n">are</span> <span class="n">no</span> <span class="n">inputs</span> <span class="n">so</span> <span class="n">the</span> <span class="n">computation</span> 
+<span class="o">//</span> <span class="n">time</span> <span class="ow">is</span> <span class="n">always</span> <span class="n">the</span> <span class="n">same</span> <span class="n">when</span> <span class="n">you</span> <span class="n">run</span> <span class="n">this</span> <span class="n">program</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>A running a single loop is $<span class="math notranslate nohighlight">\(O(n)\)</span>$.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+   <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="n">here</span>
+<span class="p">}</span>
+<span class="o">//</span> <span class="n">This</span> <span class="n">loop</span> <span class="n">takes</span> <span class="n">n</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">execute</span><span class="o">.</span> <span class="n">So</span> <span class="n">its</span> <span class="n">time</span> <span class="n">complexity</span> <span class="ow">is</span> <span class="n">O</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now suppose our algorithm had nested loops (a loop inside a loop)
+for (int i = 0; i &lt; n; ++i) {
+for (int j = 0; j &lt; n; ++j) {
+// do something here
+}
+}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+The outer loop runs $$n$$ times. And in each iteration of the outer loop, the inner loop runs $$n$$ times as well. In total, it takes the algorithm $$n \times n $$ or $$n^2$$ steps to complete. Hence, the time complexity is $$O(n^2)$$
+
+```{note}
+**Big O notation only considers the *biggest* factor**
+Suppose we had a following loop
+</pre></div>
+</div>
+<p>for (int i = 0; i &lt; n; ++i) {
+for (int j = 0; j &lt; n-1; ++j) {
+// do something here
+}
+}</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>This loop takes $$n \times (n-1) = n^2-n$$ steps to run. Since $$n^2$$ gets bigger much faster than $$n$$ as you increase $$n$$, we ignore it in it&#39;s time complexity. *The time complexity is still $$O(n^2)$$
+</pre></div>
+</div>
+<p>Now let’s analyse a loop inside a loop inside a loop (triple nested loop).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+         <span class="o">//</span> <span class="n">do</span> <span class="n">something</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
+<p>The outmost loop runs $<span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( times. The middle loops \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( times for each iteration of the outer loop. The innermost loop runs \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( times for each iteration of the middle loop. Therefore, it takes \)</span><span class="math notranslate nohighlight">\(n \times n \times n = n^3\)</span><span class="math notranslate nohighlight">\( steps to run. So the time complexity is \)</span><span class="math notranslate nohighlight">\(O(n^3)\)</span>$.</p>
+<p>TODO: finish and give examples
 TODO: figure out todo tree in vscode (where are all my todos ahhh)</p>
+</section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
@@ -453,6 +515,7 @@ means the worst possible performance of your algorithm</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-o-notation-rules">Big O Notation Rules</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
   </nav></div>
