@@ -143,8 +143,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo2.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo2.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo3.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo3.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -377,8 +377,8 @@ document.write(`
 <section id="big-o-notation-rules">
 <h2>Big O Notation Rules<a class="headerlink" href="#big-o-notation-rules" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Written as $<span class="math notranslate nohighlight">\(O(...)\)</span><span class="math notranslate nohighlight">\( where \)</span><span class="math notranslate nohighlight">\(...\)</span><span class="math notranslate nohighlight">\( is a function in terms of \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\(. \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( is the number of inputs. For example, if you're algorithm has time complexity of \)</span><span class="math notranslate nohighlight">\(O(n^2)\)</span><span class="math notranslate nohighlight">\(, then for \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( inputs your algorithm will take \)</span><span class="math notranslate nohighlight">\(n^2\)</span>$ steps to complete.</p></li>
-<li><p>The time complexity for single commands is $<span class="math notranslate nohighlight">\(O(1)\)</span>$</p></li>
+<li><p>Written as <span class="math notranslate nohighlight">\(O(...)\)</span> where <span class="math notranslate nohighlight">\(...\)</span> is a function in terms of <span class="math notranslate nohighlight">\(n\)</span>. <span class="math notranslate nohighlight">\(n\)</span> is the number of inputs. For example, if you’re algorithm has time complexity of <span class="math notranslate nohighlight">\(O(n^2)\)</span>, then for <span class="math notranslate nohighlight">\(n\)</span> inputs your algorithm will take <span class="math notranslate nohighlight">\(n^2\)</span> steps to complete.</p></li>
+<li><p>The time complexity for single commands is <span class="math notranslate nohighlight">\(O(1)\)</span></p></li>
 </ul>
 <p>i.e.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">++</span><span class="p">;</span>
@@ -391,7 +391,7 @@ document.write(`
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>A running a single loop is $<span class="math notranslate nohighlight">\(O(n)\)</span>$.</p></li>
+<li><p>A running a single loop is <span class="math notranslate nohighlight">\(O(n)\)</span>.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="n">here</span>
@@ -399,27 +399,27 @@ document.write(`
 <span class="o">//</span> <span class="n">This</span> <span class="n">loop</span> <span class="n">takes</span> <span class="n">n</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">execute</span><span class="o">.</span> <span class="n">So</span> <span class="n">its</span> <span class="n">time</span> <span class="n">complexity</span> <span class="ow">is</span> <span class="n">O</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Now suppose our algorithm had nested loops (a loop inside a loop)
-for (int i = 0; i &lt; n; ++i) {
-for (int j = 0; j &lt; n; ++j) {
-// do something here
-}
-}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-The outer loop runs $$n$$ times. And in each iteration of the outer loop, the inner loop runs $$n$$ times as well. In total, it takes the algorithm $$n \times n $$ or $$n^2$$ steps to complete. Hence, the time complexity is $$O(n^2)$$
-
-```{note}
-**Big O notation only considers the *biggest* factor**
-Suppose we had a following loop
+<p>Now suppose our algorithm had nested loops (a loop inside a loop)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+   <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="n">here</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>for (int i = 0; i &lt; n; ++i) {
-for (int j = 0; j &lt; n-1; ++j) {
-// do something here
-}
-}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>This loop takes $$n \times (n-1) = n^2-n$$ steps to run. Since $$n^2$$ gets bigger much faster than $$n$$ as you increase $$n$$, we ignore it in it&#39;s time complexity. *The time complexity is still $$O(n^2)$$
+<p>The outer loop runs <span class="math notranslate nohighlight">\(n\)</span> times. And in each iteration of the outer loop, the inner loop runs <span class="math notranslate nohighlight">\(n\)</span> times as well. In total, it takes the algorithm <span class="math notranslate nohighlight">\(n \times n \)</span> or <span class="math notranslate nohighlight">\(n^2\)</span> steps to complete. Hence, the time complexity is <span class="math notranslate nohighlight">\(O(n^2)\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Big O notation only considers the <em>biggest</em> factor</strong>
+Suppose we had a following loop</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">do</span> <span class="n">something</span> <span class="n">here</span>
+   <span class="p">}</span>
+ <span class="p">}</span>
 </pre></div>
+</div>
+<p>This loop takes <span class="math notranslate nohighlight">\(n \times (n-1) = n^2-n\)</span> steps to run. Since <span class="math notranslate nohighlight">\(n^2\)</span> gets bigger much faster than <span class="math notranslate nohighlight">\(n\)</span> as you increase <span class="math notranslate nohighlight">\(n\)</span>, we ignore the <span class="math notranslate nohighlight">\(n\)</span> term in its time complexity. *The time complexity is still <span class="math notranslate nohighlight">\(O(n^2)*\)</span></p>
 </div>
 <p>Now let’s analyse a loop inside a loop inside a loop (triple nested loop).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
@@ -429,11 +429,10 @@ for (int j = 0; j &lt; n-1; ++j) {
       <span class="p">}</span>
    <span class="p">}</span>
  <span class="p">}</span>
+
 </pre></div>
 </div>
-<p>The outmost loop runs $<span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( times. The middle loops \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( times for each iteration of the outer loop. The innermost loop runs \)</span><span class="math notranslate nohighlight">\(n\)</span><span class="math notranslate nohighlight">\( times for each iteration of the middle loop. Therefore, it takes \)</span><span class="math notranslate nohighlight">\(n \times n \times n = n^3\)</span><span class="math notranslate nohighlight">\( steps to run. So the time complexity is \)</span><span class="math notranslate nohighlight">\(O(n^3)\)</span>$.</p>
-<p>TODO: finish and give examples
-TODO: figure out todo tree in vscode (where are all my todos ahhh)</p>
+<p>The outmost loop runs <span class="math notranslate nohighlight">\(n\)</span> times. The middle loops <span class="math notranslate nohighlight">\(n\)</span> times for each iteration of the outer loop. The innermost loop runs <span class="math notranslate nohighlight">\(n\)</span> times for each iteration of the middle loop. Therefore, it takes <span class="math notranslate nohighlight">\(n \times n \times n = n^3\)</span> steps to run. So the time complexity is <span class="math notranslate nohighlight">\(O(n^3)\)</span>.</p>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
@@ -442,7 +441,7 @@ TODO: figure out todo tree in vscode (where are all my todos ahhh)</p>
 <li><p>Calculating time complexity is useful to find out whether your program will TLE without having to write the program. It helps you explore the fastest solutions</p></li>
 <li><p>“Asymptotic upper bound” is used with Big O notation
 means the worst possible performance of your algorithm</p></li>
-<li><p>Labelled as O(…), where … is some function</p></li>
+<li><p>Labelled as <span class="math notranslate nohighlight">\(O(…)\)</span>, where … is some function</p></li>
 </ul>
 <p>There’s a lot more to time complexity that we won’t touch here! For more info, check out this <a class="reference external" href="https://www.youtube.com/watch?v=D6xkbGLQesk&amp;ab_channel=CSDojo">video</a></p>
 </section>
