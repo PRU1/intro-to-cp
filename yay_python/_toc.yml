@@ -5,6 +5,7 @@ format: jb-book
 root: intro
 chapters:
 - file: basics
+- file: arrays
 - file: time-complexity
 - file: maximum-subarray
 - file: prefix-sum
@@ -15,4 +16,5 @@ chapters:
 - file: cpp-tips 
 - file: java-tips 
 - file: math-tips 
+- file: resources
 - file: markdown
